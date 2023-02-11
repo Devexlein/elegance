@@ -563,3 +563,53 @@ input:-moz-placeholder {
    height: 42px;
    padding: 10px 30px 12px;
 }
+
+/* ------- footer -------- */
+.footer {
+   background-color: #000;
+   color: #fff;
+   padding: 30px 0px;
+   text-align: center;
+}
+
+.footer__container>*+* {
+   margin-top: 25px;
+}
+
+.footer__nav>*+* {
+   margin-left: 25px;
+}
+
+.footer__nav-link {
+   color: #fff;
+   text-transform: uppercase;
+   transition: color 0.2s ease-in;
+}
+
+.footer__nav-link:hover {
+   color: #F72464;
+}
+
+.footer__socials {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.footer__socials>*+* {
+   margin-left: 30px;
+}
+
+.footer__socials-link {}
+
+.footer__socials-icon path {
+   transition: fill 0.2s ease-in;
+}
+
+.footer__socials-icon:hover path {
+   fill: #F72464;
+}
+
+.footer__copyright {
+   color: #999999;
+}
