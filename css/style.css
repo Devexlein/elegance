@@ -600,13 +600,14 @@ input:-moz-placeholder {
    margin-left: 30px;
 }
 
-.footer__socials-link {}
+/* .footer__socials-link {} */
 
-.footer__socials-icon path {
+.footer__socials-icon {
+   fill: #fff;
    transition: fill 0.2s ease-in;
 }
 
-.footer__socials-icon:hover path {
+.footer__socials-icon:hover {
    fill: #F72464;
 }
 
