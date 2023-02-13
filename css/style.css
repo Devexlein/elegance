@@ -103,20 +103,6 @@ body.lock {
    padding: 0px 15px;
 }
 
-/* */
-/* header, */
-.subscribe,
-.featured-new
-/* .blog */
-/* .info-section, */
-/* .info-section_second */
-
-/* .featured  */
-   {
-   display: none;
-}
-
-
 /* --PC-- */
 @media (max-width: 1200px) {
    [class*="__container"] {
@@ -824,17 +810,16 @@ a.head__logo {
    text-align: center;
 }
 
-.subscribe__form>*+* {
-   margin-left: 10px;
-}
 
 .subscribe__input {
+   display: inline-block;
    border: 1px solid #F72464;
    border-radius: 4px;
    font-size: 16px;
+   width: 100%;
    height: 42px;
-   width: 230px;
    padding: 10px 11px 10px 10px;
+   margin-bottom: 15px;
 }
 
 input::-webkit-input-placeholder {
@@ -858,11 +843,30 @@ input:-moz-placeholder {
 }
 
 .subscribe__btn {
+   display: block;
+   width: 100%;
    font-family: 'Noto Sans', sans-serif;
    font-size: 16px;
    height: 42px;
    padding: 10px 30px 12px;
 }
+
+@media (min-width: 450.98px) {
+   .subscribe__form>*+* {
+      margin-left: 10px;
+   }
+
+   .subscribe__input {
+      width: 230px;
+      margin-bottom: 0;
+   }
+
+   .subscribe__btn {
+      display: inline-block;
+      width: fit-content;
+   }
+}
+
 
 /* ------- footer -------- */
 .footer {
@@ -876,18 +880,21 @@ input:-moz-placeholder {
    margin-top: 25px;
 }
 
+.footer__nav {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+
 .footer__nav>*+* {
-   margin-left: 25px;
+   margin: 20px 0px 0px 0px;
 }
 
 .footer__nav-link {
    color: #fff;
    text-transform: uppercase;
    transition: color 0.2s ease-in;
-}
-
-.footer__nav-link:hover {
-   color: #F72464;
 }
 
 .footer__socials {
@@ -900,19 +907,35 @@ input:-moz-placeholder {
    margin-left: 30px;
 }
 
-/* .footer__socials-link {} */
-
 .footer__socials-icon {
    fill: #fff;
    transition: fill 0.2s ease-in;
 }
 
-.footer__socials-icon:hover {
-   fill: #F72464;
+.footer__copyright {
+   font-size: 12px;
+   color: #999999;
 }
 
-.footer__copyright {
-   color: #999999;
+@media (any-hover: hover) {
+   .footer__socials-icon:hover {
+      fill: #F72464;
+   }
+
+   .footer__nav-link:hover {
+      color: #F72464;
+   }
+}
+
+@media (min-width: 450.98px) {
+   .footer__nav {
+      flex-direction: row;
+      justify-content: center;
+   }
+
+   .footer__nav>*+* {
+      margin: 0px 0px 0px 25px;
+   }
 }
 
 @media (min-width: 767.98px) {
@@ -947,6 +970,10 @@ input:-moz-placeholder {
 
    .blog__items {
       margin-bottom: 45px;
+   }
+
+   .footer__copyright {
+      font-size: 14px;
    }
 }
 
